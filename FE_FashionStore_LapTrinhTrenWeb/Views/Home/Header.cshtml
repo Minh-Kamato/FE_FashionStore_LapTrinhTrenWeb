@@ -1,0 +1,443 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Đăng Khoa Sỹ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+
+
+    <style>
+        /*#region HEADER */
+
+        header {
+            background-color: lightblue;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+            nav ul li {
+                margin-left: 50px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+        .menu {
+            background-color: aquamarine;
+        }
+        /*#endregion */
+
+
+
+        /*#region BANNER */
+
+        .banner {
+            background-image: url('https://img.pikbest.com/backgrounds/20190808/simple-eleven-double-twelve-online-shopping-simple-banner-background_1901192.jpg!sw800');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-content {
+            text-align: center;
+            color: crimson;
+        }
+
+            .banner-content h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .banner-content p {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: aqua;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+
+        /*#endregion */
+
+
+        /*#region CONTAINER */
+        @*Danh mục sản phẩm*@
+        .main-menu ul {
+            background-color: hsl(219, 33%, 48%);
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-menu ul li {
+            margin: 0 10px;
+        }
+
+        .main-menu ul li a {
+            text-decoration: none;
+            color: chocolate;
+            font-weight: bold;
+        }
+
+
+        @*Sản phẩm nổi bật*@
+        .featured-products {
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        .featured-products h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .products {
+            display: inline-block;
+            justify-content: center;
+            margin: 5px;
+        }
+
+        .product-item {
+            width: 250px
+        }
+
+        .product-item img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .product-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            font-weight: bold;
+        }
+
+
+        @*Danh sách sản phẩm*@
+        .product-list {
+            background-color: hsl(252, 53%, 78%);
+            text-align: center;
+        }
+
+        .product-list h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .list-container {
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .product-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            font-weight: bold;
+        }
+
+
+        @*Tìm kiếm*@
+        .search-section {
+            text-align: right;
+        }
+
+        .search-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: right;
+            align-items: inherit;
+        }
+
+        #search-input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #serch-button {
+            padding: 10px 20px;
+            background-color: darkkhaki;
+            color: goldenrod;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        #search-button:hover {
+            background-color: crimson;
+        }
+
+
+        @*Giỏ hàng*@
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+
+
+        .cart {
+            position: relative;
+        }
+
+        .fa-shopping-cart {
+            font-size: 30px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+        /*#endregion */
+
+        body {
+            background-color: lightgrey;
+        }
+
+        footer {
+            background-color: black;
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+
+    </style>
+
+
+</head>
+@*-------------------------------------------------------------------------------------------------------------------------------------------------*@
+<body>
+    <!-- #region HEADER -->
+
+    <header class="SearchAndCart">
+        <div class="logo">
+            <img src="~/Content/Photo/Logo (1).jpg" alt="logo" />
+        </div>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Nhập sản phảm bạn muốn tìm ..." />
+                <button id="search-button">Tìm kiếm</button>
+            </div>
+        </section>
+        <div class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">3</span>
+        </div>
+    </header>
+
+
+    <header class="menu">
+
+        <nav>
+            <ul>
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Sản phẩm</a></li>
+                <li><a href="">Giỏ hàng</a></li>
+                <li><a href="">Liên hệ</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    @*Danh mục dản phẩm*@
+    <nav class="main-menu">
+            <ul>
+                <li><a href="">Áo thun</a></li>
+                <li><a href="">Áo sơ mi</a></li>
+                <li><a href="">Áo khoác</a></li>
+            </ul>
+        </nav>
+
+    <!-- #endregion -->
+    <!-- #region BANNER -->
+
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Chào mừng đến với trang web bán áo uy tín nhất HUFLIT</h2>
+            <p>Mua sắm với đa dạng loại áo đến từ các nhãn hàng uy tín</p>
+            <a href="" class="btn">Bắt đầu mua sắm</a>
+        </div>
+    </section>
+
+    <!-- #endregion -->
+    <!-- #region CONTAINER -->
+    @*Sản phẩm nổi bật*@
+    <section class="featured-products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-container">
+            <div class="product-item">
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (1).jpg" alt="Shirt1" />
+                    <p class="price">550.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (2).jpg" alt="Shirt2" />
+                    <p class="price">450.000vnđ</p>
+                </div>
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (3).jpg" alt="Shirt3" />
+                    <p class="price">425.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (4).jpg" alt="Shirt4" />
+                    <p class="price">400.000vnđ</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (5).jpg" alt="Shirt5" />
+                    <p class="price">475.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (6).jpg" alt="Shirt6" />
+                    <p class="price">470.000vnđ</p>
+                </div>
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (7).jpg" alt="Shirt7" />
+                    <p class="price">500.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (8).jpg" alt="Shirt8" />
+                    <p class="price">520.000vnđ</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (9).jpg" alt="Shirt9" />
+                    <p class="price">650.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (10).jpg" alt="Shirt10" />
+                    <p class="price">510.000vnđ</p>
+                </div>
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (11).jpg" alt="Shirt11" />
+                    <p class="price">570.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (12).jpg" alt="Shirt12" />
+                    <p class="price">560.000vnđ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*Danh sách sản phẩm*@
+    <section class="product-list">
+        <h2>Danh sách sản phẩm</h2>
+        <div class="list-container">
+            <div class="product-item">
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (1).jpg" alt="Shirt1" />
+                    <p class="price">550.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (2).jpg" alt="Shirt2" />
+                    <p class="price">450.000vnđ</p>
+                </div>
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (3).jpg" alt="Shirt3" />
+                    <p class="price">425.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (4).jpg" alt="Shirt4" />
+                    <p class="price">400.000vnđ</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (5).jpg" alt="Shirt5" />
+                    <p class="price">475.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (6).jpg" alt="Shirt6" />
+                    <p class="price">470.000vnđ</p>
+                </div>
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (7).jpg" alt="Shirt7" />
+                    <p class="price">500.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (8).jpg" alt="Shirt8" />
+                    <p class="price">520.000vnđ</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (9).jpg" alt="Shirt9" />
+                    <p class="price">650.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (10).jpg" alt="Shirt10" />
+                    <p class="price">510.000vnđ</p>
+                </div>
+                <div class="products">
+                    <img src="~/Content/Photo/Shirt (11).jpg" alt="Shirt11" />
+                    <p class="price">570.000vnđ</p>
+                    <img src="~/Content/Photo/Shirt (12).jpg" alt="Shirt12" />
+                    <p class="price">560.000vnđ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>If you need help, don't hesitate to contact us</p>
+        <p>Contact: 0128497562</p>
+    </footer>
+
+
+</body>
+</html>
